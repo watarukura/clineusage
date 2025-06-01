@@ -1,0 +1,8 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/google/yamlfmt/refs/heads/main/schema.json
+formatter:
+  type: basic
+  include_document_start: true
+  retain_line_breaks: true
+exclude:
+  - pnpm-lock.yaml

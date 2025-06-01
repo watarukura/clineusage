@@ -1,0 +1,18 @@
+---
+on:
+  pull_request:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  lint:
+    uses: ./.github/workflows/lint.yml
+  statuscheck:
+    needs:
+      - lint
+    runs-on: ubuntu-latest
+    if: failure()
+    timeout-minutes: 1
+    permissions: {}
+    steps:
+      - run: exit 1

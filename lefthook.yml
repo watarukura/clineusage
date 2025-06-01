@@ -1,0 +1,48 @@
+---
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+#
+# pre-push:
+#   jobs:
+#     - name: packages audit
+#       tags:
+#         - frontend
+#         - security
+#       run: yarn audit
+#
+#     - name: gems audit
+#       tags:
+#         - backend
+#         - security
+#       run: bundle audit
+#
+pre-commit:
+  parallel: true
+  jobs:
+    - name: lint
+      glob: "*.ts"
+      run: deno lint .
+    - name: fmt
+      glob: "*.ts"
+      run: deno fmt .
+      #    - name: test
+      #      glob: "*.ts"
+      #      run: deno test -A
+    - name: typos
+      run: typos .
+    - name: actionlint
+      glob: ".github/workflows/**"
+      run: actionlint
+    - name: yamlfmt
+      glob: "*.{yml,yaml}"
+      run: yamlfmt -conf .yamlfmt.yml .
+    - name: trivy_secret
+      run: |
+        trivy fs --scanners secret \
+          --severity MEDIUM,HIGH,CRITICAL \
+          --exit-code 1 .
+#    - name: trivy fs
+#      run: |
+#        trivy fs deno.lock
