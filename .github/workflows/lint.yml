@@ -38,7 +38,7 @@ jobs:
       - uses: aquaproj/aqua-installer@9ebf656952a20c45a5d66606f083ff34f58b8ce0 # v4.0.0
         timeout-minutes: 3
         with:
-          aqua_version: v2.51.2
+          aqua_version: v2.53.3
       - name: typos
         timeout-minutes: 3
         run: |
@@ -53,7 +53,7 @@ jobs:
       - uses: aquaproj/aqua-installer@9ebf656952a20c45a5d66606f083ff34f58b8ce0 # v4.0.0
         timeout-minutes: 3
         with:
-          aqua_version: v2.51.2
+          aqua_version: v2.53.3
       - name: trivy
         timeout-minutes: 3
         run: |
@@ -74,7 +74,7 @@ jobs:
       - uses: aquaproj/aqua-installer@9ebf656952a20c45a5d66606f083ff34f58b8ce0 # v4.0.0
         timeout-minutes: 3
         with:
-          aqua_version: v2.51.2
+          aqua_version: v2.53.3
       - name: yamlfmt
         timeout-minutes: 3
         run: |
@@ -102,7 +102,7 @@ jobs:
       - uses: aquaproj/aqua-installer@9ebf656952a20c45a5d66606f083ff34f58b8ce0 # v4.0.0
         timeout-minutes: 3
         with:
-          aqua_version: v2.51.2
+          aqua_version: v2.53.3
       - name: fmt
         run: deno fmt --check
       - name: lint
