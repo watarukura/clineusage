@@ -18,5 +18,5 @@ packages:
   - name: astral-sh/uv@0.7.8
   - name: nodejs/node@v24.1.0
   - name: aquasecurity/trivy@v0.62.1
-  - name: google/yamlfmt@v0.17.0
+  - name: google/yamlfmt@v0.17.2
   - name: rhysd/actionlint@v1.7.7
