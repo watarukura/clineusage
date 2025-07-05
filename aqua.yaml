@@ -13,7 +13,7 @@ registries:
 packages:
   - name: denoland/deno@v2.3.3
   - name: evilmartians/lefthook@v1.11.13
-  - name: crate-ci/typos@v1.32.0
+  - name: crate-ci/typos@v1.34.0
   - name: direnv/direnv@v2.36.0
   - name: astral-sh/uv@0.7.8
   - name: nodejs/node@v24.1.0
