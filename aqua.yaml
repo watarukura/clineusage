@@ -11,7 +11,7 @@ registries:
   - type: standard
     ref: v4.371.2 # renovate: depName=aquaproj/aqua-registry
 packages:
-  - name: denoland/deno@v2.3.3
+  - name: denoland/deno@v2.4.2
   - name: evilmartians/lefthook@v1.11.13
   - name: crate-ci/typos@v1.32.0
   - name: direnv/direnv@v2.36.0
